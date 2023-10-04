@@ -18,11 +18,11 @@
     <input type="button" onclick="checkAuthor()" value="Check the guess">
 </form>
 
-
 <p id="result">This text will be replaced </p>
 
-<script> 
+<div> <img id="image" src="erbil.jpg" style="width: 100px; height: 100px;" onclick="selectImage()"> </div>
 
+<script>
 let good = 0
 let oops = 0
 
@@ -40,6 +40,25 @@ function checkAuthor(){
         alert("Sorry, incorrect")
     }
     out.innerHTML = "Correct: " + good + "   Bad: " + oops
+}
+
+let useImage = 1
+
+function selectImage(){
+    img = document.getElementById("image")
+
+    if(useImage == 1){
+        img.src = "erbil.jpg"
+        useImage++
+    }
+    else if(useImage == 2){
+        img.src = "london.jpg"
+        useImage++
+    }
+    else if(useImage == 3){
+        img.src = "moscow.jpg"
+        useImage = 1
+    }
 }
 </script>
 
