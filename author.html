@@ -23,18 +23,23 @@
 
 <script> 
 
-function resolveForm (){
-    console.log("Getting form values")
-    age = document.getElementById("form1_age").value
-    nick = document.getElementById("form1_nick").value
-    confirmed = confirm("Are these the values? "+age+" and "+nick)
-    
+let good = 0
+let oops = 0
+
+function checkAuthor(){
+    author = document.getElementById("hidden_author").value
+    guess = document.getElementById("guess_check").value
     out = document.getElementById("result")
-    if(confirmed){
-        out.innerHTML = "Values were confirmed"
-    } else {
-        out.innerHTML = "Values were not confirmed"
+
+    if(author == guess){
+        good += 1
+        alert("You got it right!")
     }
+    else {
+        oops += 1
+        alert("Sorry, incorrect")
+    }
+    out.innerHTML = "Correct: " + good + "   Bad: " + oops
 }
 </script>
 
