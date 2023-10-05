@@ -23,6 +23,16 @@
 <p id="result">Nothing was working to print the list of objects</p>
 
 
+<form>
+    <label for="days">Enter the number of days</label>
+    <input type="text" id="days" name="days" value="days"> <br>
+
+    <label for="price">Enter price</label>
+    <input type="text" id="price" name="price" value="price"> <br>
+
+    <input type="button" id="update" onclick="updateCruise()" value="Update the cruise">
+</form>
+
 <script>
 
 let my_cruise = {}
@@ -46,6 +56,23 @@ function selectCruise(){
     }
     out.innerHTML = output
     // I've tried everything and it will not work
+}
+
+function updateCruise(){
+    days = document.getElementById("days").value
+    price = document.getElementById("price").value
+    out = document.getElementById("result")
+
+    form my_cruise[days] = days
+    form my_cruise[price] = price
+
+    output = ""
+    for (var x in my_cruise){
+        if (my.cruise.hasOwnProperty(x)){
+            output += x + " "
+        }
+    }
+    out.innerHTML = output
 }
 </script>
 
