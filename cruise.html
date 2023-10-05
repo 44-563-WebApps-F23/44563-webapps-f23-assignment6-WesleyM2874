@@ -9,18 +9,18 @@
 
 <form>
     <label for="shareCabin">Shares Cabin</label>
-    <input type="checkbox" id="shareCabin" name="shareCabin" value="true"> <br>
+    <input type="checkbox" id="shareCabin" name="shareCabin" value="True"> <br>
 
     <label for="breakfast">Breakfast</label>
-    <input type="checkbox" id="breakfast" name="breakfast" value="true"> <br>
+    <input type="checkbox" id="breakfast" name="breakfast" value="True"> <br>
 
     <label for="poolPass">Pool Pass</label>
-    <input type="checkbox" id="poolPass" name="poolPass" value="false"> <br>
+    <input type="checkbox" id="poolPass" name="poolPass" value="False"> <br>
 
     <input type="button" id="selectCruise" onclick="selectCruise()" value="Select a cruise">
 </form>
 
-<p id="result">This text will be replaced </p>
+<p id="result">Nothing was working to print the list of objects</p>
 
 
 <script>
@@ -38,7 +38,12 @@ function selectCruise(){
     my_cruise.push(breakfast)
     my_cruise.push(poolPass)
 
-    out.innerHTML = JSON.stringify(my_cruise)
+    output = ""
+    for (x in my_cruise){
+        output += x + " "
+    }
+    out.innerHTML = output
+    // I've tried everything and it will not work
 }
 </script>
 
