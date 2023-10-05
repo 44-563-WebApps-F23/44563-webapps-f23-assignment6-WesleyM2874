@@ -3,3 +3,9 @@
 Introduction to Java Script and DOM
 
 Hosted at: https://github.com/44-563-WebApps-F23/44563-webapps-f23-assignment6-WesleyM2874#webapps-f23-assignment-6
+
+file:///C:/Users/s539200/Desktop/School/Machine%20Learning/Git%20Repos/44563-webapps-f23-assignment6-WesleyM2874/author.html
+
+file:///C:/Users/s539200/Desktop/School/Machine%20Learning/Git%20Repos/44563-webapps-f23-assignment6-WesleyM2874/tips.html
+
+file:///C:/Users/s539200/Desktop/School/Machine%20Learning/Git%20Repos/44563-webapps-f23-assignment6-WesleyM2874/cruise.html
