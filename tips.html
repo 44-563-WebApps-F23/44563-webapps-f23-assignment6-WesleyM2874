@@ -18,8 +18,22 @@
     <input type="button" onclick="tips()" value="Show tip">
 </form>
 
-
 <p id="result">This text will be replaced </p>
+
+
+<form>
+    <label for="sum">Sum</label>
+    <input type="radio" id="sum" value="sum" onclick="chooseOp()"> <br>
+
+    <label for="diff">Difference</label>
+    <input type="radio" id="diff" value="difference" onclick="chooseOp()"> <br>
+
+    <label for="mult">Product</label>
+    <input type="radio" id="mult" value="mult" onclick="chooseOp()">
+</form>
+
+<p id="result2">This text will be replaced </p>
+
 
 <script> 
 
@@ -38,6 +52,26 @@ function tips(){
         toShow += (tip + "% is " + myOutput.toFixed(2) + "; ")
     }
     out.innerHTML = "Tips are: " + toShow
+}
+
+function chooseOp(){
+    base = document.getElementById("first_val").value
+    tip = document.getElementById("second_val").value
+    out = document.getElementById("result2")
+
+    sum = document.getElementById("sum").checked
+    diff = document.getElementById("diff").checked
+    mult = document.getElementById("mult").checked
+
+    if (sum){
+        out.innerHTML = base - -(tip)
+    }
+    else if (confirm(diff)){
+        out.innerHTML = base / tip
+    }
+    else if (confirm(mult)){
+        out.innerHTML = base * tip
+    }
 }
 </script>
 
