@@ -28,19 +28,21 @@
 let my_cruise = {}
 
 function selectCruise(){
-    shareCabin = document.getElementById("shareCabin").checked
+    shared = document.getElementById("shareCabin").checked
     breakfast = document.getElementById("breakfast").checked
-    poolPass = document.getElementById("poolPass").checked
+    pool = document.getElementById("poolPass").checked
     out = document.getElementById("result")     
 
     my_cruise = {}
-    my_cruise.push(shareCabin)
-    my_cruise.push(breakfast)
-    my_cruise.push(poolPass)
+    my_cruise.shared = shared.checked
+    my_cruise.breakfast = breakfast.checked
+    my_cruise.pool = pool.checked
 
     output = ""
-    for (x in my_cruise){
-        output += x + " "
+    for (var x in my_cruise){
+        if (my.cruise.hasOwnProperty(x)){
+            output += x + " "
+        }
     }
     out.innerHTML = output
     // I've tried everything and it will not work
